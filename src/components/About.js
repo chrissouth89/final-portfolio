@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
-import aboutForest from "../aboutForest.jpg";
+// import aboutForest from "../forest.jpg";
 import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(sanityClient);
@@ -26,8 +26,12 @@ export default function About() {
 
   if (!author) return <div>Loading...</div>;
   return (
-    <main className="relative">
-      <img src={aboutForest} alt="Forest" className="absolute w-full" />
+    <main className="bg-green-200 min-h-screen p-12">
+      {/* <img
+          src={aboutForest}
+          alt="Forest"
+          className="absolute object-fill w-full"
+        /> */}
       <div className="p-10 lg:pt-48 container mx-auto relative">
         <section className="bg-green-800 rounded-lg shadow-2xl lg:flex p-20">
           <img
